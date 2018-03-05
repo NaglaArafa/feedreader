@@ -35,7 +35,7 @@ $(function() {
             allFeeds.forEach(function(value){
                 expect(value.url).toBeDefined();
                 expect(value.url).not.toBe('');
-            })  
+            });
         });
 
         /* TODO: Write a test that loops through each feed
@@ -46,7 +46,7 @@ $(function() {
             allFeeds.forEach(function(value){
                 expect(value.name).toBeDefined();
                 expect(value.name).not.toBe('');
-            })  
+            }); 
         });
     });
 
@@ -76,7 +76,7 @@ $(function() {
 
             menuIcon.click();
             expect(body).toContain('menu-hidden');                   
-        })
+        });
     });
         
 
@@ -90,10 +90,9 @@ $(function() {
          */
         beforeEach(function(done){
             loadFeed(0,function(){
-                done()
-            })
-         
-        })
+                done();
+            });
+        });
         
         
         it('loadfeed function works correctly', function(done) {
@@ -111,10 +110,9 @@ $(function() {
          */
         beforeEach(function(done){
             loadFeed(1,function(){
-                done()
-            })
-         
-        })
+                done();
+            });
+        });
         
         
         it('Should change content when another feed selected', function(done) {
