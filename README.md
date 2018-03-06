@@ -17,6 +17,6 @@ you can clone or download the repo and check the test cases you will find it in 
 
 after downloading or cloning the repo open index.html in the browser to see the application running and scroll down to check jasmine testing status
 
-or, you can try it from [hrer](https://naglaarafa.github.io/feedreader/)
+or, you can try it from [here](http://naglaarafa.github.io/feedreader/)
 
 
