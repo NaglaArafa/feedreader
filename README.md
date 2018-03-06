@@ -13,6 +13,10 @@ In this project you are given a web-based application that reads RSS feeds. The 
 
 # For Developer
 
-you can clone or download the repo and checkthe test cases you will find it in **./jasmine/spec/feedreader.js** and if you need to see the documentaion of jasmine check [this]((http://jasmine.github.io)) link, also there are  (**./index.html**), (**./css/style.css**) and (**./js/app.js**) these files are provided from udacity starter project you can find it [here](https://github.com/udacity/frontend-nanodegree-feedreader).
+you can clone or download the repo and check the test cases you will find it in **./jasmine/spec/feedreader.js** and if you need to see the documentaion of jasmine check [this]((http://jasmine.github.io)) link, also there are  (**./index.html**), (**./css/style.css**) and (**./js/app.js**) these files are provided from udacity starter project you can find it [here](https://github.com/udacity/frontend-nanodegree-feedreader).
+
+after downloading or cloning the repo open index.html in the browser to see the application running and scroll down to check jasmine testing status
+
+or, you can try it from [hrer](https://naglaarafa.github.io/feedreader/)
 
 

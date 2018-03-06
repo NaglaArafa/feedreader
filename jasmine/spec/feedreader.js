@@ -58,11 +58,11 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-        var body=document.body.classList,
-            menuIcon = document.querySelector('.menu-icon-link');
+        var body=$('body'),
+            menuIcon = $('.menu-icon-link');
 
         it('Should be hidden by default', function() {
-            expect(body).toContain('menu-hidden');
+            expect(body.hasClass('menu-hidden')).toBe(true);
         });
 
          /* TODO: Write a test that ensures the menu changes
@@ -72,10 +72,10 @@ $(function() {
           */
         it('changes visibility when the menu icon is clicked', function(){
             menuIcon.click();
-            expect(body).not.toContain('menu-hidden');
+            expect(body.hasClass('menu-hidden')).not.toBe(true);
 
             menuIcon.click();
-            expect(body).toContain('menu-hidden');                   
+            expect(body.hasClass('menu-hidden')).toBe(true);                   
         });
     });
         
@@ -96,8 +96,8 @@ $(function() {
         
         
         it('loadfeed function works correctly', function(done) {
-            let entryLinks=document.querySelectorAll('.entry-link').length;
-            expect(entryLinks).toBeGreaterThan(0);
+            let entryLength=$('.feed .entry').length;
+            expect(entryLength).toBeGreaterThan(0);
             done();
         });
         
@@ -108,17 +108,22 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        var prevUrl,
+            newUrl;
         beforeEach(function(done){
-            loadFeed(1,function(){
+            loadFeed(0,function(){
                 done();
             });
         });
         
         
         it('Should change content when another feed selected', function(done) {
-            let headerTitle=document.querySelector('.header-title');
-            expect(headerTitle).not.toEqual(allFeeds[0].name);
-            done();
+            prevUrl=$('.feed').html();
+            loadFeed(1, function(){
+                newUrl=$('.feed').html();
+                expect(prevUrl).not.toEqual(newUrl);
+                done();
+            });
         });
     });
         
